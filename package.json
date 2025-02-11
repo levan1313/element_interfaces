@@ -1,6 +1,6 @@
 {
   "name": "element_interfaces",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "dist/element_interfaces.cjs.js",
   "types": "dist/index.d.ts",
