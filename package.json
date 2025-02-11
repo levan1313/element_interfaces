@@ -12,7 +12,7 @@
     "generate-schemas": "tsx ./src/generate-schema.ts",
     "inject-schema": "npx tsx src/utils/processSchemas.ts",
     "update-version": "npm version patch",
-    "publish": "npm publish --access public"
+    "pub": "tsx ./src/generate-schema.ts && inject-schema && update-version && npm publish --access public"
   },
   "exports": {
     ".": {

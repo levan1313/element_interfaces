@@ -1,6 +1,8 @@
-import { ApiResponseI } from "./general.type";
+import { ApiResponseI, PaginatedData } from "./general.type";
 
-export interface LeaderBoardProgressI{
+// leaderboard progress this data contains players of ongoing promotion
+
+export interface LeaderBoardProgressDataI{
   leaderboardRecordId: number;
   playerId: number;
   playerUsername: string;
@@ -10,4 +12,34 @@ export interface LeaderBoardProgressI{
   prizeAmount: number;
 }
 
-export type LeaderboardProgressT = ApiResponseI<LeaderBoardProgressI[]>
+export interface LeaderboardProgressResponseI {
+  items: PaginatedData<LeaderBoardProgressDataI>
+};
+
+export type LeaderboardProgressResponseT = ApiResponseI<LeaderBoardProgressDataI[]>;
+
+
+// it contains all the leaderboards in ongoing promotion
+
+interface LeaderboardsListItemI {
+  id: number;
+  title: string;
+  place: number;
+  reapeatType: number;
+  startDate: string;
+  endDate: string;
+}
+
+interface PrizeI {
+  prize: string;
+  count: number;
+}
+
+export interface LeaderboardsListDataI {
+  leaderboards: PaginatedData<LeaderboardsListItemI> & {
+    sortableFields: ["Id", "Name", "Status"];
+  };
+  prizes: PrizeI[];
+}
+
+export type LeaderboardsListResponseT = ApiResponseI<LeaderboardsListDataI[]>;

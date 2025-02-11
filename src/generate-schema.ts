@@ -17,7 +17,9 @@ if (!fs.existsSync(outputFolder)) {
 
 // Define interfaces to generate schemas for
 const interfaces = [
-  { file: "src/types/leaderboard.type.ts", interface: "LeaderboardProgressT" },
+  { file: "src/types/balance.type.ts", interface: "BalancesListResponseI" },
+  { file: "src/types/leaderboard.type.ts", interface: "LeaderboardProgressResponseT" },
+  { file: "src/types/promotion.type.ts", interface: "PromotionResponseT" },
 ];
 
 interfaces.forEach(({ interface: interfaceName }) => {

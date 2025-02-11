@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
-        "LeaderBoardProgressI": {
+        "LeaderBoardProgressDataI": {
             "properties": {
                 "amount": {
                     "type": "number"
@@ -30,27 +30,10 @@
     },
     "properties": {
         "data": {
-            "properties": {
-                "items": {
-                    "items": {
-                        "$ref": "#/definitions/LeaderBoardProgressI"
-                    },
-                    "type": "array"
-                },
-                "pageNumber": {
-                    "type": "number"
-                },
-                "pageSize": {
-                    "type": "number"
-                },
-                "totalCount": {
-                    "type": "number"
-                },
-                "totalPages": {
-                    "type": "number"
-                }
+            "items": {
+                "$ref": "#/definitions/LeaderBoardProgressDataI"
             },
-            "type": "object"
+            "type": "array"
         },
         "error": {
             "type": "string"
