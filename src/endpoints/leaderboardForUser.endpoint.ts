@@ -1,16 +1,12 @@
 import { LeaderboardProgressForUserDataI, LeaderboardProgressForUserResponseT } from "types/leaderboardForUser.type";
 import { EndpointInfoI } from "../types/general.type";
-import {
-  LeaderBoardProgressDataI,
-  LeaderboardProgressResponseT,
-} from "../types/leaderboard.type";
 
 export type LeaderboardQueryParams = {
     ExternalId: string;
   PageNumber: number;
   PageSize: number;
 };
-export const leaderboardProgress: EndpointInfoI<
+export const leaderboardProgressForUser: EndpointInfoI<
   LeaderboardProgressForUserResponseT,
   { query: { ExternalId: LeaderboardProgressForUserDataI["data"]["items"][number]["externalId"] } }
 > = {
