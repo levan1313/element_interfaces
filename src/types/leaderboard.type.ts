@@ -2,7 +2,7 @@ import { ApiResponseI, PaginatedData } from "./general.type";
 
 // leaderboard progress this data contains players of ongoing promotion
 
-export interface LeaderBoardProgressDataI{
+export interface LeaderBoardProgressDataI {
   leaderboardRecordId: number;
   playerId: number;
   playerUsername: string;
@@ -10,14 +10,16 @@ export interface LeaderBoardProgressDataI{
   placement: number;
   coinId: string;
   prizeAmount: number;
+  externalId: number;
 }
 
 export interface LeaderboardProgressResponseI {
-  items: PaginatedData<LeaderBoardProgressDataI>
-};
+  items: PaginatedData<LeaderBoardProgressDataI>;
+}
 
-export type LeaderboardProgressResponseT = ApiResponseI<LeaderBoardProgressDataI[]>;
-
+export type LeaderboardProgressResponseT = ApiResponseI<
+  LeaderBoardProgressDataI[]
+>;
 
 // it contains all the leaderboards in ongoing promotion
 

@@ -20,10 +20,22 @@ export interface EndpointInfoI<T, Q extends ParamsType = undefined> {
   fetch?: (params: Q) => T;
 }
 
-export interface PaginatedData<T> {
-  items: T;
+
+export interface PaginationMeta {
   pageNumber: number;
   pageSize: number;
   totalCount: number;
   totalPages: number;
+}
+
+
+export interface PaginationMeta {
+  pageNumber: number;
+  pageSize: number;
+  totalCount: number;
+  totalPages: number;
+}
+
+export interface PaginatedData<T> extends PaginationMeta {
+  items: T;
 }
