@@ -19,7 +19,7 @@ export const leaderboardProgress: EndpointInfoI<
   schemaType: <LeaderboardProgressResponseT>{},
   endpointType: "RT",
   // @jsonSchema(LeaderboardProgressResponseT)
-schema:  `{"$schema":"http://json-schema.org/draft-07/schema#","definitions":{"LeaderBoardProgressDataI":{"properties":{"amount":{"type":"number"},"coinId":{"type":"string"},"leaderboardRecordId":{"type":"number"},"placement":{"type":"number"},"playerId":{"type":"number"},"playerUsername":{"type":"string"},"prizeAmount":{"type":"number"}},"type":"object"}},"properties":{"data":{"items":{"$ref":"#/definitions/LeaderBoardProgressDataI"},"type":"array"},"error":{"type":"string"},"message":{"type":"string"},"succeeded":{"type":"boolean"},"validationErrors":{"additionalProperties":{"items":{"type":"string"},"type":"array"},"type":"object"}},"type":"object"}`,
+schema:   `{"$schema":"http://json-schema.org/draft-07/schema#","definitions":{"LeaderBoardProgressDataI":{"properties":{"amount":{"type":"number"},"coinId":{"type":"string"},"leaderboardRecordId":{"type":"number"},"placement":{"type":"number"},"playerId":{"type":"number"},"playerUsername":{"type":"string"},"prizeAmount":{"type":"number"}},"type":"object"}},"properties":{"data":{"items":{"$ref":"#/definitions/LeaderBoardProgressDataI"},"type":"array"},"error":{"type":"string"},"message":{"type":"string"},"succeeded":{"type":"boolean"},"validationErrors":{"additionalProperties":{"items":{"type":"string"},"type":"array"},"type":"object"}},"type":"object"}`,
 };
 
 export const leaderboardsList: EndpointInfoI<LeaderboardsListResponseT> = {
@@ -28,5 +28,5 @@ export const leaderboardsList: EndpointInfoI<LeaderboardsListResponseT> = {
   schemaType: <LeaderboardsListResponseT>{},
   endpointType: "DT",
   // @jsonSchema(LeaderboardsListT)
-  schema:  `undefined`,
+schema:   `undefined`,
 };
